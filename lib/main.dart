@@ -50,43 +50,17 @@ class _MainState extends State<Main> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        shadowColor: Colors.transparent,
-        backgroundColor: Colors.white,
-        title: Image.asset(
-          "assets/images/instagram_text.png",
-          width: 110,
-          height: 50,
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              FontAwesomeIcons.plusSquare,
-              color: Colors.black87,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              FontAwesomeIcons.heart,
-              color: Colors.black87,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              FontAwesomeIcons.paperPlane,
-              color: Colors.black87,
-            ),
-          ),
-        ],
-      ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 10),
         child: TabBarView(
           controller: _tabController,
-          children: [Home(), Search(), Reel(), Shop(), Profile()],
+          children: [
+            Home(),
+            Search(),
+            Reel(),
+            Shop(),
+            Profile(),
+          ],
         ),
       ),
       bottomNavigationBar: Container(
